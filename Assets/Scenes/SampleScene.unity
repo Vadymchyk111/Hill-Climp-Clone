@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc5f084d0854d029bba9264e897d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addFuelEvent: {fileID: 0}
+  _addFuelEvent: {fileID: 11400000, guid: 73cbf6d51e1c27e46928f24c55890d3a, type: 2}
 --- !u!212 &152793155
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2092,7 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc5f084d0854d029bba9264e897d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addFuelEvent: {fileID: 0}
+  _addFuelEvent: {fileID: 11400000, guid: 73cbf6d51e1c27e46928f24c55890d3a, type: 2}
 --- !u!212 &865731698
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc5f084d0854d029bba9264e897d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addFuelEvent: {fileID: 0}
+  _addFuelEvent: {fileID: 11400000, guid: 73cbf6d51e1c27e46928f24c55890d3a, type: 2}
 --- !u!212 &1146406934
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3253,7 +3253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc5f084d0854d029bba9264e897d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addFuelEvent: {fileID: 0}
+  _addFuelEvent: {fileID: 11400000, guid: 73cbf6d51e1c27e46928f24c55890d3a, type: 2}
 --- !u!212 &1580295377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3602,7 +3602,6 @@ GameObject:
   - component: {fileID: 1950997920}
   - component: {fileID: 1950997919}
   - component: {fileID: 1950997924}
-  - component: {fileID: 1950997925}
   - component: {fileID: 1950997921}
   - component: {fileID: 1950997923}
   - component: {fileID: 1950997922}
@@ -3730,21 +3729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27d8111cb3826e48a38fb92c3feb25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fuelSliderController: {fileID: 0}
-  _addFuelEvent: {fileID: 0}
---- !u!114 &1950997925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950997918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd47024548bf4efb89264b113dddb29c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fuelController: {fileID: 1950997924}
+  _fuelSliderController: {fileID: 1128742162}
+  _addFuelEvent: {fileID: 11400000, guid: 73cbf6d51e1c27e46928f24c55890d3a, type: 2}
 --- !u!1 &1977697237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3940,7 +3926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc5f084d0854d029bba9264e897d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addFuelEvent: {fileID: 0}
+  _addFuelEvent: {fileID: 11400000, guid: 73cbf6d51e1c27e46928f24c55890d3a, type: 2}
 --- !u!212 &2108872634
 SpriteRenderer:
   m_ObjectHideFlags: 0
