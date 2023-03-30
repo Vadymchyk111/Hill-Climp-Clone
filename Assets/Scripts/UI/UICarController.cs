@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using ScriptableObjects.Events;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UI
 {

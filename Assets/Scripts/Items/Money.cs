@@ -1,8 +1,6 @@
-using System;
 using Car;
 using ScriptableObjects.Coins;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Items
 {

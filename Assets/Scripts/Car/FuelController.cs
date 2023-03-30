@@ -1,37 +1,38 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UI;
 using UnityEngine;
 
-public class FuelController : MonoBehaviour
+namespace Car
 {
-    public event Action OnDied;
-
-    [SerializeField] private FuelSliderController fuelSliderController;
-
-    private void Start()
+    public class FuelController : MonoBehaviour
     {
-        fuelSliderController.StartFuelCalculation();
-    }
+        public event Action OnDied;
 
-    private void OnEnable()
-    {
-        fuelSliderController.OnFuelIsZero += DoDied;
-    }
+        [SerializeField] private FuelSliderController fuelSliderController;
 
-    private void OnDisable()
-    {
-        fuelSliderController.OnFuelIsZero -= DoDied;
-    }
+        private void Start()
+        {
+            fuelSliderController.StartFuelCalculation();
+        }
 
-    public void RecoveryFuel(float starveValue)
-    {
-        fuelSliderController.RecoveryFuel(starveValue);
-    }
+        private void OnEnable()
+        {
+            fuelSliderController.OnFuelIsZero += DoDied;
+        }
 
-    private void DoDied()
-    {
-        OnDied?.Invoke();
+        private void OnDisable()
+        {
+            fuelSliderController.OnFuelIsZero -= DoDied;
+        }
+
+        public void RecoveryFuel(float starveValue)
+        {
+            fuelSliderController.RecoveryFuel(starveValue);
+        }
+
+        private void DoDied()
+        {
+            OnDied?.Invoke();
+        }
     }
 }

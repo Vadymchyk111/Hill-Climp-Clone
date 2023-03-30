@@ -6,9 +6,7 @@ namespace ScriptableObjects.Settings
    public class CarMoveSettings : ScriptableObject
    {
       [SerializeField] private float _moveSpeed;
-      [SerializeField] private float _acceleration;
 
       public float MoveSpeed => _moveSpeed;
-      public float Acceleration => _acceleration;
    }
 }
