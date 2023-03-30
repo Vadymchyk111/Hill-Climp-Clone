@@ -11,7 +11,7 @@ namespace Car
         [SerializeField] private Rigidbody2D _backTire;
         [SerializeField] private CarMoveSettings _carMoveSettings;
         [SerializeField] private ScriptableObjectFloatEvent _carMoveEvent;
-        
+
         private bool _isMoving;
         private Coroutine _movingCoroutine;
         private readonly WaitForSeconds _movingDelayInSeconds = new(0.01f);
