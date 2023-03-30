@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
     _name: Money
-    _value: 60
+    _value: 0
   _minValue:
     _name: MinMoney
     _value: 0
