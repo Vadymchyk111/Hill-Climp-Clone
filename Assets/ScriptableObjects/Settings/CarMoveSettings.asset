@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25dee27a9460b9241ae89d8452b56751, type: 3}
   m_Name: CarMoveSettings
   m_EditorClassIdentifier: 
-  _moveSpeed: 0
+  _moveSpeed: 150
   _acceleration: 0
