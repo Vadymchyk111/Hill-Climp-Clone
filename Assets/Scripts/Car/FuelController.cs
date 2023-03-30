@@ -1,6 +1,7 @@
 using System;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Car
 {
@@ -32,6 +33,7 @@ namespace Car
 
         private void DoDied()
         {
+            SceneManager.LoadScene(0);
             OnDied?.Invoke();
         }
     }

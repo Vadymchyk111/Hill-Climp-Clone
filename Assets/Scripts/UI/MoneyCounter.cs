@@ -27,7 +27,7 @@ namespace UI
         {
             _money -= moneyCount;
             _text.text = _money.ToString();
-           
+            _moneyCount.Value.ChangeValue(_moneyCount.Value.RestoreValue() - moneyCount);
         }
 
         private void Init()
