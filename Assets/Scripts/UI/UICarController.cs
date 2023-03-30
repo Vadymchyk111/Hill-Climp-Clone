@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using ScriptableObjects.Events;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,29 +9,29 @@ namespace UI
     public class UICarController : MonoBehaviour
     {
         [SerializeField] private ScriptableObjectFloatEvent _carMoveEvent;
-        [SerializeField] private Button _buttonMoveForvard;
-        [SerializeField] private Button _buttonMoveBackward;
+        [SerializeField] private CustomButton _buttonMoveForvard;
+        [SerializeField] private CustomButton _buttonMoveBackward;
 
         private void OnEnable()
         {
-            _buttonMoveForvard.onClick.AddListener(MoveForward);
-            _buttonMoveBackward.onClick.AddListener(MoveBackward);
+            _buttonMoveForvard.OnClick += MoveForward;
+            _buttonMoveBackward.OnClick += MoveBackward;
         }
 
         private void OnDisable()
         {
-            _buttonMoveForvard.onClick.RemoveListener(MoveForward);
-            _buttonMoveBackward.onClick.RemoveListener(MoveBackward);
+            _buttonMoveForvard.OnClick -= MoveForward;
+            _buttonMoveBackward.OnClick -= MoveBackward;
         }
 
-        private void MoveForward()
+        private void MoveForward(bool isMove)
         {
-            _carMoveEvent.ChangeValue(1f);
+            _carMoveEvent.ChangeValue(isMove ? 1f : 0f);
         }
         
-        private void MoveBackward()
+        private void MoveBackward(bool isMove)
         {
-            _carMoveEvent.ChangeValue(-1f);
+            _carMoveEvent.ChangeValue(isMove ? -1f : 0f);
         }
     }
 }
