@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91ff6a6a6364d1cb93cb0e77534090b, type: 3}
   m_Name: Coin 25
   m_EditorClassIdentifier: 
-  coinCount: 25
+  _coinCount: 25
   _sprite: {fileID: 21300000, guid: ef7cc553e90c1c84f9ed17fd2a9373e7, type: 3}

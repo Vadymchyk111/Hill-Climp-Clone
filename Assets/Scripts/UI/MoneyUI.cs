@@ -1,4 +1,3 @@
-using System;
 using PlayerPrefsValues;
 using TMPro;
 using UnityEngine;
@@ -27,7 +26,7 @@ namespace UI
 
         private void UpdateUI(int value, int minValue, int maxValue)
         {
-            _text.text = _moneyCount.Value.RestoreValue().ToString();
+            _text.text = _moneyCount.Value.Value.ToString();
         }
     }
 }
