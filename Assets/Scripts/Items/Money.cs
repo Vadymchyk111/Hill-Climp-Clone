@@ -1,4 +1,4 @@
-using Car;
+using PlayerPrefsValues;
 using ScriptableObjects.Coins;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ namespace Items
     {
         [SerializeField] private Coin _coin;
         [SerializeField] private SpriteRenderer _renderer;
+        [SerializeField] private ScriptableObjectInt _moneyCount;
 
         private void Start()
         {
@@ -21,14 +22,7 @@ namespace Items
                 return;
             }
             
-            PlayerStats playerStats = col.gameObject.GetComponentInParent<PlayerStats>();
-
-            if (playerStats == null)
-            {
-                return;
-            }
-            
-            playerStats.GetMoney(_coin.CoinCount);
+            _moneyCount.ChangeValue(_moneyCount.Value.RestoreValue() + _coin.CoinCount, true);
             Destroy(gameObject);
         }
     }

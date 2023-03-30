@@ -53,7 +53,6 @@ namespace Car
                 _backTire.AddTorque(-moveDirection * _carMoveSettings.MoveSpeed * Time.fixedDeltaTime);
                 yield return _movingDelayInSeconds;
             }
-            
         }
     }
 }

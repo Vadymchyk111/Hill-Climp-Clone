@@ -1,10 +1,12 @@
-using Car;
+using ScriptableObjects.Events;
 using UnityEngine;
 
 namespace Items
 {
     public class Fuel : MonoBehaviour
     {
+        [SerializeField] private ScriptableObjectFloatEvent _addFuelEvent;
+        
         private readonly float _fuelCount = 0.25f;
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -13,15 +15,8 @@ namespace Items
             {
                 return;
             }
-            
-            PlayerStats playerStats = col.gameObject.GetComponentInParent<PlayerStats>();
-
-            if (playerStats == null)
-            {
-                return;
-            }
-            
-            playerStats.RecoveryFuel(_fuelCount);
+        
+            _addFuelEvent.ChangeValue(_fuelCount);
             Destroy(gameObject);
         }
     }

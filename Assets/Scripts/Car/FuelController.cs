@@ -1,4 +1,5 @@
 using System;
+using ScriptableObjects.Events;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,26 +10,29 @@ namespace Car
     {
         public event Action OnDied;
 
-        [SerializeField] private FuelSliderController fuelSliderController;
+        [SerializeField] private FuelSliderController _fuelSliderController;
+        [SerializeField] private ScriptableObjectFloatEvent _addFuelEvent;
 
         private void Start()
         {
-            fuelSliderController.StartFuelCalculation();
+            _fuelSliderController.StartFuelCalculation();
         }
 
         private void OnEnable()
         {
-            fuelSliderController.OnFuelIsZero += DoDied;
+            _fuelSliderController.OnFuelIsZero += DoDied;
+            _addFuelEvent.OnValueChanged += RecoveryFuel;
         }
 
         private void OnDisable()
         {
-            fuelSliderController.OnFuelIsZero -= DoDied;
+            _fuelSliderController.OnFuelIsZero -= DoDied;
+            _addFuelEvent.OnValueChanged -= RecoveryFuel;
         }
 
-        public void RecoveryFuel(float starveValue)
+        private void RecoveryFuel(float starveValue)
         {
-            fuelSliderController.RecoveryFuel(starveValue);
+            _fuelSliderController.RecoveryFuel(starveValue);
         }
 
         private void DoDied()
