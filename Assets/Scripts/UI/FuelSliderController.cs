@@ -16,11 +16,6 @@ namespace UI
         private Coroutine _fuelCoroutine;
         private WaitForSeconds _fuelUpdateTickInSecondsDelay;
 
-        private void Awake()
-        {
-            _fuelUpdateTickInSecondsDelay = new WaitForSeconds(_fuelUpdateTickInSeconds);
-        }
-
         public void RecoveryFuel(float value)
         {
             _slider.value += value;
@@ -31,6 +26,11 @@ namespace UI
             StopFuelCalculation();
 
             _fuelCoroutine = StartCoroutine(StarveCoroutine());
+        }
+        
+        private void Awake()
+        {
+            _fuelUpdateTickInSecondsDelay = new WaitForSeconds(_fuelUpdateTickInSeconds);
         }
 
         private void StopFuelCalculation ()
