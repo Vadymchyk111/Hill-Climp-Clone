@@ -1,3 +1,4 @@
+using Constants;
 using PlayerPrefsValues;
 using ScriptableObjects.Coins;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace Items
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (!col.gameObject.CompareTag("Player"))
+            if (!col.gameObject.CompareTag(PlayerConstants.PLAYER_TAG))
             {
                 return;
             }

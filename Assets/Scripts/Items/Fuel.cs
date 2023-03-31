@@ -1,5 +1,6 @@
 using ScriptableObjects.Events;
 using UnityEngine;
+using Constants;
 
 namespace Items
 {
@@ -11,7 +12,7 @@ namespace Items
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (!col.gameObject.CompareTag("Player"))
+            if (!col.gameObject.CompareTag(PlayerConstants.PLAYER_TAG))
             {
                 return;
             }
