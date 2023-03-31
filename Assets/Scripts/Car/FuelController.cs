@@ -37,7 +37,6 @@ namespace Car
 
         private void DoDied()
         {
-            SceneManager.LoadScene(0);
             OnDied?.Invoke();
         }
     }

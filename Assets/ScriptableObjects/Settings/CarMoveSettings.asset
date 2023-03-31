@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CarMoveSettings
   m_EditorClassIdentifier: 
   _moveSpeed: 150
-  _acceleration: 0
+  _rotationSpeed: 300

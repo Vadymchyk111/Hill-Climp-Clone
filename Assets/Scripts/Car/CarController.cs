@@ -9,6 +9,7 @@ namespace Car
     {
         [SerializeField] private Rigidbody2D _frontTire;
         [SerializeField] private Rigidbody2D _backTire;
+        [SerializeField] private Rigidbody2D _car;
         [SerializeField] private CarMoveSettings _carMoveSettings;
         [SerializeField] private ScriptableObjectFloatEvent _carMoveEvent;
 
@@ -51,6 +52,7 @@ namespace Car
             {
                 _frontTire.AddTorque(-moveDirection * _carMoveSettings.MoveSpeed * Time.fixedDeltaTime);
                 _backTire.AddTorque(-moveDirection * _carMoveSettings.MoveSpeed * Time.fixedDeltaTime);
+                _car.AddTorque(moveDirection * _carMoveSettings.RotationSpeed * Time.fixedDeltaTime);
                 yield return _movingDelayInSeconds;
             }
         }
