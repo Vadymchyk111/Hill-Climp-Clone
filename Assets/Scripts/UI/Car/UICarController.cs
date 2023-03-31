@@ -1,7 +1,8 @@
 using ScriptableObjects.Events;
+using UI.Button;
 using UnityEngine;
 
-namespace UI
+namespace UI.Car
 {
     public class UICarController : MonoBehaviour
     {

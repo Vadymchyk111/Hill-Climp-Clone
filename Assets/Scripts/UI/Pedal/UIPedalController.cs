@@ -1,6 +1,7 @@
+using UI.Button;
 using UnityEngine;
 
-namespace UI
+namespace UI.Pedal
 {
     public class UIPedalController : MonoBehaviour
     {

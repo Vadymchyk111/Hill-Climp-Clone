@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-namespace UI
+namespace UI.GameManager
 {
     public class GameManagerUI : MonoBehaviour
     {
+        public event Action OnRestartGame;
+        
         [SerializeField] private GameObject _mainPanel;
         [SerializeField] private GameObject _loosePanel;
         [SerializeField] private GameObject _winnerPanel;
-        [SerializeField] private Button _restartButton;
+        [SerializeField] private UnityEngine.UI.Button _restartButton;
 
         private void OnEnable()
         {
@@ -38,7 +38,7 @@ namespace UI
 
         private void RestartScene()
         {
-            SceneManager.LoadScene(0);
+            OnRestartGame?.Invoke();
         }
     }
 }

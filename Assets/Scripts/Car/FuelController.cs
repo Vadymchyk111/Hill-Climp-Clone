@@ -1,6 +1,7 @@
 using System;
 using ScriptableObjects.Events;
 using UI;
+using UI.Car;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

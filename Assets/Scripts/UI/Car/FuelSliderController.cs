@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Car
 {
     public class FuelSliderController : MonoBehaviour
     {
