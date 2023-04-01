@@ -1,4 +1,4 @@
-using UI.Button;
+using UI.Buttons;
 using UnityEngine;
 
 namespace UI.Pedal

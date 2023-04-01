@@ -1,3 +1,4 @@
+using System;
 using Car;
 using UI.GameManager;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace GameManager
             _flag.OnReachedPoint += WinGame;
             _fuelController.OnDied += LooseGame;
             _gameManagerUI.OnRestartGame += RestartGame;
+            _gameManagerUI.OnNextLevel += NextLevel;
+            _gameManagerUI.OnMenuOpened += LoadMenu;
         }
 
         private void OnDisable()
@@ -23,6 +26,8 @@ namespace GameManager
             _flag.OnReachedPoint -= WinGame;
             _fuelController.OnDied -= LooseGame;
             _gameManagerUI.OnRestartGame -= RestartGame;
+            _gameManagerUI.OnNextLevel -= NextLevel;
+            _gameManagerUI.OnMenuOpened -= LoadMenu;
         }
 
         private void WinGame()
@@ -40,7 +45,19 @@ namespace GameManager
         private void RestartGame()
         {
             Time.timeScale = 1;
-            _levelManager.LoadLevel();
+            _levelManager.LoadFirstLevel();
+            _gameManagerUI.SetMainPanel();
+        }
+
+        private void NextLevel()
+        {
+            Time.timeScale = 1;
+            _levelManager.LoadNextLevel();
+        }
+
+        private void LoadMenu()
+        {
+            _levelManager.LoadMenu();
         }
     }
 }
